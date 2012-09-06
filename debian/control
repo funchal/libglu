@@ -1,7 +1,8 @@
 Source: libglu
 Section: graphics
 Priority: optional
-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Cyril Brulebois <kibi@debian.org>
 Standards-Version: 3.9.3
 Build-Depends:
