@@ -1,3 +1,10 @@
+libglu (9.0.0-0ubuntu1) quantal; urgency=low
+
+  * Sync from unreleased debian git.
+    - first real release
+
+ -- Timo Aaltonen <tjaalton@ubuntu.com>  Tue, 18 Sep 2012 08:32:30 +0300
+
 libglu (9.0.0-1) UNRELEASED; urgency=low
 
   * First release, split from upstream mesa repo.
