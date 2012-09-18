@@ -5,7 +5,7 @@ includedir=@includedir@
 
 Name: glu
 Description: Mesa OpenGL Utility library
-Requires: gl
+Requires: @GLU_REQUIRES@
 Version: @VERSION@
 Libs: -L${libdir} -lGLU
 Libs.private: -lm
