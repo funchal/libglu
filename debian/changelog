@@ -1,10 +1,4 @@
-libglu (9.0~git20120903.f98fdc4d-0ubuntu1) quantal; urgency=low
-
-  * Merge from unreleased debian git.
-
- -- Timo Aaltonen <tjaalton@ubuntu.com>  Thu, 06 Sep 2012 10:48:38 +0300
-
-libglu (9.0~git20120903.f98fdc4d-1) UNRELEASED; urgency=low
+libglu (9.0-1) UNRELEASED; urgency=low
 
   * First release, split from upstream mesa repo.
 

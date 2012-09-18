@@ -63,16 +63,15 @@ AC_ARG_ENABLE(osmesa,
 dnl Get the pkg-config definitions for libGL/OSMesa.  We include a fallback
 dnl path for implementations that don't provide a .pc file
 if test "x$OSMESA" = "xyes"; then
+    GLU_REQUIRES="osmesa"
     PKG_CHECK_MODULES(OSMESA, [osmesa], [], [
-          AC_CHECK_HEADER([GL/osmesa.h],
-                  [],
-                  AC_MSG_ERROR([OSMesa not found]))
           AC_CHECK_LIB([OSMesa],
                    [glBegin],
                    [OSMESA_LIBS=-lOSMesa],
                    AC_MSG_ERROR([OSMesa required]))
           ])
 else
+    GLU_REQUIRES="gl"
     PKG_CHECK_MODULES(GL, [gl], [], [
           AC_CHECK_HEADER([GL/gl.h],
                   [],
@@ -83,6 +82,7 @@ else
                    AC_MSG_ERROR([GL required]))
           ])
 fi
+AC_SUBST([GLU_REQUIRES])
 
 dnl Set up C warning and visibility flags.
 if test "x$GCC" = xyes; then
@@ -94,7 +94,7 @@ if test "x$GCC" = xyes; then
     VISIBILITY_CFLAGS="-fvisibility=hidden"
     CFLAGS="$CFLAGS $VISIBILITY_CFLAGS"
     AC_LINK_IFELSE([AC_LANG_PROGRAM()], AC_MSG_RESULT([yes]),
-		   [VISIBILITY_CFLAGS=""; AC_MSG_RESULT([no])]);
+                   [VISIBILITY_CFLAGS=""; AC_MSG_RESULT([no])]);
 
     # Restore CFLAGS; VISIBILITY_CFLAGS are added to it where needed.
     CFLAGS=$save_CFLAGS
@@ -107,9 +107,9 @@ if test "x$GCC" = xyes; then
         AC_MSG_CHECKING([whether $CXX supports -fvisibility=hidden])
         VISIBILITY_CXXFLAGS="-fvisibility=hidden"
         CXXFLAGS="$CXXFLAGS $VISIBILITY_CXXFLAGS"
-	AC_LANG_PUSH([C++])
+        AC_LANG_PUSH([C++])
         AC_LINK_IFELSE([AC_LANG_PROGRAM()], AC_MSG_RESULT([yes]),
-		       [VISIBILITY_CXXFLAGS=""; AC_MSG_RESULT([no])]);
+                       [VISIBILITY_CXXFLAGS=""; AC_MSG_RESULT([no])]);
         AC_LANG_POP([C++])
 
         # Restore CXXFLAGS; VISIBILITY_CXXFLAGS are added to it where needed.
