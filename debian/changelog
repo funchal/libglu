@@ -1,4 +1,4 @@
-libglu (9.0~git20120903.f98fdc4d-1) UNRELEASED; urgency=low
+libglu (9.0-1) UNRELEASED; urgency=low
 
   * First release, split from upstream mesa repo.
 
