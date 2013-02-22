@@ -42,9 +42,10 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AC_ARG_ENABLE(debug,
               AS_HELP_STRING([--enable-debug],
                 [Enable debugging information]),
-              [CFLAGS="$CFLAGS -g -O0"
-               CXXFLAGS="$CXXFLAGS -g -O0"],
-              [])
+              [CFLAGS="$CFLAGS -g -O0 -DDEBUG"
+               CXXFLAGS="$CXXFLAGS -g -O0 -DDEBUG"],
+              [CFLAGS="$CFLAGS -DNDEBUG"
+               CXXFLAGS="$CXXFLAGS -DNDEBUG"])
 
 dnl Make sure the pkg-config macros are defined
 m4_ifndef([PKG_PROG_PKG_CONFIG],
