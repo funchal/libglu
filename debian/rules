@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 override_dh_clean:
 	for file in debian/*.in; do rm -f $${file%%.in}; done
 	dh_clean
