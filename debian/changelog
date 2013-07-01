@@ -1,3 +1,10 @@
+libglu (9.0.0-2) UNRELEASED; urgency=low
+
+  * Note in debian/copyright that we use version 2.0 of the SGI FreeB license.
+    Thanks, Ansgar Burchardt!
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 01 Jul 2013 18:23:15 +0200
+
 libglu (9.0.0-1) unstable; urgency=low
 
   * Team upload.

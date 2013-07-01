@@ -58,6 +58,10 @@ License: SGI-1.1
  Inc. The Original Code is Copyright (c) 1991-2000 Silicon Graphics, Inc.
  Copyright in any portions created by third parties is as indicated
  elsewhere herein. All Rights Reserved.
+Comment:
+ The SGI FreeB license version 1.1 allows the Recipient to choose to use
+ Covered Code under the terms of a subsequent version of the license.  Debian
+ makes use of that possibility, using the 2.0 version as above.
 
 Files: include/GL/glu_mangle.h
 Copyright: 1995-1998 Brian Paul
