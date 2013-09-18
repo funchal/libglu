@@ -6,6 +6,8 @@ libglu (9.0.0-2) UNRELEASED; urgency=low
 
   [ Andreas Boll ]
   * Disable silent rules.
+  * Cherry-pick commit 0692115 (Add -D(N)DEBUG to CFLAGS dependent on --
+    enable-debug) from upstream (Closes: #723577)
 
  -- Julien Cristau <jcristau@debian.org>  Mon, 01 Jul 2013 18:23:15 +0200
 
