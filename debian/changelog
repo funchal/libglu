@@ -1,4 +1,4 @@
-libglu (9.0.0-2) UNRELEASED; urgency=low
+libglu (9.0.0-2) unstable; urgency=low
 
   [ Julien Cristau ]
   * Note in debian/copyright that we use version 2.0 of the SGI FreeB license.
@@ -9,7 +9,7 @@ libglu (9.0.0-2) UNRELEASED; urgency=low
   * Cherry-pick commit 0692115 (Add -D(N)DEBUG to CFLAGS dependent on --
     enable-debug) from upstream (Closes: #723577)
 
- -- Julien Cristau <jcristau@debian.org>  Mon, 01 Jul 2013 18:23:15 +0200
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 19 Sep 2013 22:23:50 +0200
 
 libglu (9.0.0-1) unstable; urgency=low
 
