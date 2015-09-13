@@ -15,14 +15,14 @@ Vcs-Browser: http://git.debian.org/?p=pkg-xorg/lib/libglu.git
 Package: libglu1-mesa
 Section: libs
 Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
 Provides: libglu1
 Conflicts: mesag3 (<< 5.0.0-1), xlibmesa3, libglu1
 Replaces: libglu1
-Pre-Depends: ${misc:Pre-Depends}
-Multi-Arch: same
 Description: Mesa OpenGL utility library (GLU)
  GLU offers simple interfaces for building mipmaps; checking for the
  presence of extensions in the OpenGL (or other libraries which follow
@@ -40,6 +40,7 @@ Description: Mesa OpenGL utility library (GLU)
 Package: libglu1-mesa-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends:
  libglu1-mesa (= ${binary:Version}),
  libgl1-mesa-dev | libgl-dev,

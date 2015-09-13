@@ -1,3 +1,12 @@
+libglu (9.0.0-2.1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+
+  * Add multi-arch support. Simple fix provided by Francois Gouget
+    (Closes: #689089).
+
+ -- Sam Hocevar <sho@debian.org>  Sun, 13 Sep 2015 15:59:01 +0200
+
 libglu (9.0.0-2) unstable; urgency=low
 
   [ Julien Cristau ]
