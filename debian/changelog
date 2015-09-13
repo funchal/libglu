@@ -2,6 +2,7 @@ libglu (9.0.0-2.1) UNRELEASED; urgency=medium
 
   * Non-maintainer upload.
 
+  * Bump standards-version. No changes required.
   * Add multi-arch support. Simple fix provided by Francois Gouget
     (Closes: #689089).
 
